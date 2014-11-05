@@ -2,7 +2,6 @@
 
 var React = require('react');
 var yarr = require('./yarr');
-var mergeInto = require('react/lib/mergeInto');
 
 module.exports = React.createClass({
 
@@ -67,7 +66,7 @@ module.exports = React.createClass({
     // update this to support the other kinds of props as well.
     
 
-    return React.DOM.a(
+    return React.createElement('a',
       props,
       this.props.children
     );

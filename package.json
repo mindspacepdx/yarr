@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/naman34/yarr.git"
+    "url": "git://github.com/mindspacepdx/yarr.git"
   },
   "main": "index.js",
   "devDependencies": {},
   "dependencies": {
-    "react": "^0.11.1"
+    "react": "^0.12.0"
   }
 }
