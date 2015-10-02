@@ -49,7 +49,7 @@ module.exports = React.createClass({
 
   render: function(){
 
-    var props = {};
+    var props = this.props;
     props.href = this.props.href || '#!';
 
     if(!!this.props.className){
