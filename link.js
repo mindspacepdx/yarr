@@ -2,6 +2,7 @@
 
 var React = require('react');
 var yarr = require('./yarr');
+var _ = require('underscore');
 
 module.exports = React.createClass({
 
@@ -49,7 +50,7 @@ module.exports = React.createClass({
 
   render: function(){
 
-    var props = this.props;
+    var props = _.clone(this.props);
     props.href = this.props.href || '#!';
 
     if(!!this.props.className){
