@@ -3,14 +3,9 @@
 var React = require('react');
 var yarr = require('./yarr');
 
-module.exports = React.createClass({
+class Link extends React.Component {
+  route (event) {
 
-  getInitialState: function(){
-    return {};
-  },
-
-  route: function(event){
-    
     if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control')) {return;}
 
     event.preventDefault();
@@ -45,9 +40,9 @@ module.exports = React.createClass({
     if(this.props.href){
       yarr.show(this.props.href);  
     }
-  },
+  }
 
-  render: function(){
+  render () {
 
     var props = Object.assign({}, this.props);
     props.href = this.props.href || '#!';
@@ -71,4 +66,6 @@ module.exports = React.createClass({
     );
   }
 
-});
+}
+
+module.exports = Link;
