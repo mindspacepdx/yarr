@@ -4,6 +4,12 @@ var React = require('react');
 var yarr = require('./yarr');
 
 class Link extends React.Component {
+  constructor (props) {
+    super(props)
+    this.route = this.route.bind(this)
+    this.state = {}
+  }
+
   route (event) {
 
     if(event.getModifierState('Shift') || event.getModifierState('Alt') || event.getModifierState('Control')) {return;}
